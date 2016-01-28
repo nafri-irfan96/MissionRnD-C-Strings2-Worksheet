@@ -11,6 +11,22 @@ Note:Dont modify original string Neglect Spaces at the right end and at left end
 #include <stdlib.h>
 
 char * get_last_word(char * str){
-
-	return NULL;
+	if (str = "")
+		return "";
+	int i, j;
+	i = j = 0;
+	char *s;
+	s = (char *)malloc(sizeof(char) * 100);
+	while (str[i] != '\0')
+		i++;
+	while (str[i] == ' ')
+		i--;
+	while (str[i] != ' ' || i == 0)
+		i--;
+	i++;
+	if (i == 1)
+		return "";
+	while (str[i] != '\0')
+		s[j++] = str[i++];
+	return s;
 }
